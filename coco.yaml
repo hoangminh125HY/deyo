@@ -9,12 +9,15 @@
 
 
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-train: /kaggle/working/MD-1/train/images
-val: /kaggle/working/MD-1/valid/images
-test: /kaggle/working/MD-1/test/images
+path: /kaggle/working/MD-1  # dataset root dir
+train: /kaggle/working/MD-1/train/labels # train images (relative to 'path') 118287 images
+val: /kaggle/working/MD-1/valid/labels # val images (relative to 'path') 5000 images
+test: /kaggle/working/MD-1/test/labels  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
 
-nc: 1
-names: ['mouse']
+# Classes
+names:
+  0: person
+  1: mouse
 
 
 # Download script/URL (optional)
